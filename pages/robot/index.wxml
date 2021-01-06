@@ -1,0 +1,33 @@
+<!--pages/robot/index.wxml-->
+<view class="main">
+  <view class="item">
+    1、调试出GPS精确度：
+    
+    <view class="des" wx:if="{{position.longitude}}">
+      当前经纬度：({{position.latitude}},{{position.longitude}})
+      <!--手机显示 39.8933,116.6887 -->
+    </view>
+    <!-- <view class="des">在某一个区域展示李白形象</view> -->
+    <view class="des">手机上GPS的经纬度误差在500米左右</view>
+    <!-- <view class="des">H5页面支持调用GPS:getLocation</view> -->
+    <view class="des">【需支持】花径、美庐、三叠泉的具体坐标范围；</view>
+    <!-- <view class="des">或根据景点谷歌地图查询</view> -->
+  </view>
+  <view class="item">
+    2、调试陀螺仪的使用方法
+    <view class="des">为了在某个角度扫描时控制</view>
+    <view class="des">用陀螺仪实现偏移角度即可</view>
+    <view class="des">需确认：H5页面是否支持调用GPS</view>
+    <view class="des">实体再根据实际出现的角度实现</view>
+  </view>
+  <view class="item">
+    3、调试出李白
+    <view class="des">李白形象的何时出现以及声音的播放</view>
+    <view class="des">音频的播放</view>
+    <view class="des">李白形象的出现时的动作</view>
+  </view>
+  <view class="item">
+    4、备忘
+    <view class="des">即使忘记，可以在父页面获取到，然后传递给web-view页面</view>
+  </view>
+</view>

@@ -1,4 +1,6 @@
 /**app.wxss**/
+/* wxss将设备屏幕的宽统一定义为750rpx */
+/* 规定屏幕宽度为20rem；1rem = (750/20)rpx = 37.5rpx*/
 .container {
   height: 100%;
   display: flex;
@@ -8,3 +10,6 @@
   padding: 200rpx 0;
   box-sizing: border-box;
 } 
+Page{
+  font-size: 100%;
+}

@@ -1,0 +1,22 @@
+/* pages/robot/index.wxss */
+page{
+  height: 100%;
+}
+.main{
+  height: 100%;
+  padding-top: 30px;
+  padding-left: 30px;
+  font-size: 32rpx;
+  background-color: #333;
+  color: #fff;
+}
+.main .item{
+  padding-bottom: 40rpx;  
+}
+
+.item .des{
+  padding-top: 20rpx;
+  padding-left:50rpx;
+  color: #2cc445;
+  font-size: 28rpx;
+}
