@@ -1,0 +1,4 @@
+<!--index.wxml-->
+<view class="container">
+  <web-view src="https://iguoxing.oss-cn-beijing.aliyuncs.com/ar/ali/lushan/libai/libai-ceshi.html"></web-view>
+</view>
