@@ -13,27 +13,22 @@ Page({
       longitude:'',
       speed:'',
       accuracy:''
-    }
+    },
+    rotate:0,
+    area:"东偏北",
+    detailArea:90
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    
   },
-
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
     let _this=this
     wx.getLocation({
       type: 'wgs84',
@@ -53,7 +48,59 @@ Page({
           position:_this.data.position
         })
       }
-     })     
+     })  
+  },
+
+  /**
+   * 生命周期函数--监听页面显示
+   */
+  onShow: function () {
+    let that = this;
+    console.log('--before startDeviceMotionListening --')
+    wx.startDeviceMotionListening({
+      interval:'ui',
+      success (res) {
+        console.info(res)
+      }
+    })
+    wx.onDeviceMotionChange(function(res){
+      console.info(res)
+    })
+    console.log('--after onDeviceMotionChange --')
+
+    // console.log('--before onCompassChange --')
+
+    // wx.onCompassChange(function (res) {
+    //   console.log('--onCompassChange start--')
+    //   console.log(res)
+      // let rotate = 360 - res.direction.toFixed(0)
+      // let area = parseInt(rotate/90)
+      // let detailArea = rotate%90
+      // that.setData({
+      //   rotate:rotate
+      // })
+      // if(area==0){
+      //   that.setData({
+      //     area:"西偏北",
+      //     detailArea: 90-detailArea
+      //   })
+      // }else if(area==1){
+      //   that.setData({
+      //       area: "西偏南",
+      //       detailArea: detailArea
+      //   })
+      // } else if (area == 2) {
+      //   that.setData({
+      //     area: "东偏南",
+      //     detailArea: 90-detailArea
+      //   })
+      // }else{
+      //   that.setData({
+      //     area: "东偏北",
+      //     detailArea: detailArea
+      //   })
+      // }
+    // });
   },
 
   /**
@@ -67,7 +114,7 @@ Page({
    * 生命周期函数--监听页面卸载
    */
   onUnload: function () {
-
+    // wx.offCompassChange()
   },
 
   /**
