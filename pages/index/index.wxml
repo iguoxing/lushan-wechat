@@ -1,5 +1,5 @@
 <!--index.wxml-->
 <view class="container">
-  <view>index</view>
-  <!-- <web-view src="https://iguoxing.oss-cn-beijing.aliyuncs.com/ar/ali/lushan/libai/libai-ceshi.html"></web-view> -->
+  <!-- <view>index</view> -->
+  <web-view src="https://iguoxing.oss-cn-beijing.aliyuncs.com/ar/ali/lushan/libai/libai-ceshi.html"></web-view>
 </view>

@@ -1,7 +1,7 @@
 {
   "pages":[
-    "pages/robot/index",
     "pages/index/index",
+    "pages/robot/index",
     "pages/logs/logs"
   ],
   "permission": {

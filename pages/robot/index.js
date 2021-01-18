@@ -23,7 +23,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    
+    // 39.893349,116.688845
   },
   /**
    * 生命周期函数--监听页面初次渲染完成
@@ -34,16 +34,11 @@ Page({
       type: 'wgs84',
       altitude:'true',
       success (res) {
-        const latitude = res.latitude
-        const longitude = res.longitude
-        const speed = res.speed
-        const accuracy = res.accuracy
-        _this.data.position.latitude=latitude;
-        _this.data.position.longitude=longitude;
-        _this.data.position.speed=speed;
-        _this.data.position.accuracy=accuracy;
-        console.info(res)
-        console.info(_this.data.position)
+        _this.data.position.latitude=res.latitude;
+        _this.data.position.longitude=res.longitude;
+        _this.data.position.speed=res.speed;
+        _this.data.position.accuracy=res.accuracy;
+        // console.info(_this.data.position)
         _this.setData({
           position:_this.data.position
         })
@@ -63,10 +58,10 @@ Page({
         console.info(res)
       }
     })
+    // {alpha: 100.69494, beta: -41.393387, gamma: -9.812126}
     wx.onDeviceMotionChange(function(res){
       console.info(res)
     })
-    console.log('--after onDeviceMotionChange --')
 
     // console.log('--before onCompassChange --')
 
