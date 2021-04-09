@@ -1,5 +1,11 @@
 <!--index.wxml-->
 <view class="container">
   <!-- <view>index</view> -->
-  <web-view src="https://iguoxing.oss-cn-beijing.aliyuncs.com/ar/ali/lushan/libai/libai-ceshi.html"></web-view>
+  <web-view wx:if="{{type==1}}" src="https://iguoxing.oss-cn-beijing.aliyuncs.com/ar/ali/lushan/libai/libai-wechat.html"></web-view>
+  <web-view wx:if="{{type==2}}" src="https://iguoxing.oss-cn-beijing.aliyuncs.com/ar/ali/lushan/libai/pages/libai-wanglushan.html"></web-view>
+
+  <!-- https://iguoxing.oss-cn-beijing.aliyuncs.com/ar/ali/lushan/glb/minguo02.glb -->
+  <!-- https://iguoxing.oss-cn-beijing.aliyuncs.com/ar/ali/lushan/glb/ponu01.glb -->
+
+
 </view>

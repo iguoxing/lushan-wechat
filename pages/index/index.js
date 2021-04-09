@@ -7,7 +7,8 @@ Page({
     motto: 'Hello World',
     userInfo: {},
     hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo')
+    canIUse: wx.canIUse('button.open-type.getUserInfo'),
+    type:1//1 大林寺桃花 2望庐山瀑布 3美庐别墅历史
   },
   //事件处理函数
   bindViewTap: function() {
